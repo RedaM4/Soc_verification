@@ -1,0 +1,134 @@
+Command: /home/Abdulmalek_Aldossery/DV_training/DV_project/tb/./simv +UVM_TESTNAME=wb_test +UVM_VERBOSITY=UVM_DEBUG -l run.log
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP1_Full64; Runtime version W-2024.09-SP1_Full64;  Apr 16 10:38 2025
+UVM_INFO /mnt/NVME2/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO wb_test_lib.sv(11) @ 0: uvm_test_top [TEST_CLASS] INSIDE CONSTRUCTOR
+UVM_INFO @ 0: reporter [RNTST] Running test wb_test...
+UVM_INFO wb_test_lib.sv(21) @ 0: uvm_test_top [TEST_CLASS] INSIDE BUILD PHASE
+UVM_INFO ../sv/wb_master_agent.sv(13) @ 0: uvm_test_top.testBench.env.master_agent [--AGENT_CLASS--] INSIDE CONSTRUCTOR
+UVM_INFO ../sv/wb_slave_agent.sv(12) @ 0: uvm_test_top.testBench.env.slave_agent [--AGENT_CLASS--] INSIDE CONSTRUCTOR
+UVM_INFO ../sv/wb_master_agent.sv(23) @ 0: uvm_test_top.testBench.env.master_agent [--AGENT_CLASS--] INSIDE BUILD PHASE
+UVM_INFO ../sv/wb_master_driver.sv(16) @ 0: uvm_test_top.testBench.env.master_agent.driver [--DRIVER_CLASS--] INSIDE CONSTRUCTOR
+UVM_INFO ../sv/wb_master_sequencer.sv(11) @ 0: uvm_test_top.testBench.env.master_agent.sequencer [--SEQUENCER_CLASS--] INSIDE CONSTRUCTOR
+UVM_INFO ../sv/wb_master_driver.sv(27) @ 0: uvm_test_top.testBench.env.master_agent.driver [--DRIVER_CLASS--] INSIDE BUILD PHASE
+UVM_INFO ../sv/wb_master_sequencer.sv(22) @ 0: uvm_test_top.testBench.env.master_agent.sequencer [--SEQUENCER_CLASS--] INSIDE BUILD PHASE
+UVM_INFO ../sv/wb_slave_agent.sv(22) @ 0: uvm_test_top.testBench.env.slave_agent [--AGENT_CLASS--] INSIDE BUILD PHASE
+UVM_INFO ../sv/wb_slave_driver.sv(20) @ 0: uvm_test_top.testBench.env.slave_agent.driver [--DRIVER_CLASS--] INSIDE CONSTRUCTOR
+UVM_INFO ../sv/wb_slave_sequencer.sv(10) @ 0: uvm_test_top.testBench.env.slave_agent.sequencer [--SEQUENCER_CLASS--] INSIDE CONSTRUCTOR
+UVM_INFO ../sv/wb_slave_driver.sv(31) @ 0: uvm_test_top.testBench.env.slave_agent.driver [--DRIVER_CLASS--] INSIDE BUILD PHASE
+UVM_INFO ../sv/wb_slave_sequencer.sv(21) @ 0: uvm_test_top.testBench.env.slave_agent.sequencer [--SEQUENCER_CLASS--] INSIDE BUILD PHASE
+UVM_INFO ../sv/wb_master_driver.sv(37) @ 0: uvm_test_top.testBench.env.master_agent.driver [--DRIVER_CLASS--] INSIDE CONNECT PHASE
+UVM_INFO ../sv/wb_master_sequencer.sv(29) @ 0: uvm_test_top.testBench.env.master_agent.sequencer [--SEQUENCER_CLASS--] INSIDE CONNECT PHASE
+UVM_INFO ../sv/wb_master_agent.sv(40) @ 0: uvm_test_top.testBench.env.master_agent [--AGENT_CLASS--] INSIDE CONNECT PHASE
+UVM_INFO ../sv/wb_slave_driver.sv(41) @ 0: uvm_test_top.testBench.env.slave_agent.driver [--DRIVER_CLASS--] INSIDE CONNECT PHASE
+UVM_INFO ../sv/wb_slave_sequencer.sv(28) @ 0: uvm_test_top.testBench.env.slave_agent.sequencer [--SEQUENCER_CLASS--] INSIDE CONNECT PHASE
+UVM_INFO ../sv/wb_slave_agent.sv(39) @ 0: uvm_test_top.testBench.env.slave_agent [--AGENT_CLASS--] INSIDE CONNECT PHASE
+UVM_INFO wb_demo_tb.sv(24) @ 0: uvm_test_top.testBench [CONNECT] Scoreboard connected to both master and slave monitors
+UVM_INFO wb_test_lib.sv(37) @ 0: uvm_test_top [TEST_CLASS] INSIDE CONNECT PHASE
+UVM_INFO ../sv/wb_master_driver.sv(22) @ 0: uvm_test_top.testBench.env.master_agent.driver [--DRIVER_CLASS--] START OF SIMULATION PHASE
+UVM_INFO ../sv/wb_master_sequencer.sv(17) @ 0: uvm_test_top.testBench.env.master_agent.sequencer [--SEQUENCER_CLASS--] START OF SIMULATION PHASE
+UVM_INFO ../sv/wb_master_agent.sv(18) @ 0: uvm_test_top.testBench.env.master_agent [--AGENT_CLASS--] START OF SIMULATION PHASE
+UVM_INFO ../sv/wb_slave_driver.sv(26) @ 0: uvm_test_top.testBench.env.slave_agent.driver [--DRIVER_CLASS--] START OF SIMULATION PHASE
+UVM_INFO ../sv/wb_slave_sequencer.sv(16) @ 0: uvm_test_top.testBench.env.slave_agent.sequencer [--SEQUENCER_CLASS--] START OF SIMULATION PHASE
+UVM_INFO ../sv/wb_slave_agent.sv(17) @ 0: uvm_test_top.testBench.env.slave_agent [--AGENT_CLASS--] START OF SIMULATION PHASE
+UVM_INFO wb_test_lib.sv(16) @ 0: uvm_test_top [--TEST_CLASS--] START OF SIMULATION PHASE
+UVM_INFO /mnt/NVME2/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/seq/uvm_sequencer_base.svh(1486) @ 0: uvm_test_top.testBench.env.master_agent.sequencer [PHASESEQ] No default phase sequence for phase 'run'
+UVM_INFO /mnt/NVME2/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/seq/uvm_sequencer_base.svh(1486) @ 0: uvm_test_top.testBench.env.slave_agent.sequencer [PHASESEQ] No default phase sequence for phase 'run'
+UVM_INFO ../sv/wb_master_driver.sv(42) @ 0: uvm_test_top.testBench.env.master_agent.driver [--DRIVER_CLASS--] INSIDE RUN PHASE
+UVM_INFO ../sv/wb_master_agent.sv(49) @ 0: uvm_test_top.testBench.env.master_agent [--AGENT_CLASS--] INSIDE RUN PHASE
+UVM_INFO ../sv/wb_slave_driver.sv(46) @ 0: uvm_test_top.testBench.env.slave_agent.driver [--DRIVER_CLASS--] INSIDE RUN PHASE
+UVM_INFO ../sv/wb_slave_agent.sv(48) @ 0: uvm_test_top.testBench.env.slave_agent [--AGENT_CLASS--] INSIDE RUN PHASE
+UVM_INFO wb_test_lib.sv(44) @ 0: uvm_test_top [TEST_CLASS] INSIDE RUN PHASE
+UVM_INFO /mnt/NVME2/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+-----------------------------------------------------------------------
+Name                          Type                     Size  Value     
+-----------------------------------------------------------------------
+uvm_test_top                  wb_test                  -     @343      
+  testBench                   wb_tb                    -     @360      
+    env                       wb_env                   -     @376      
+      master_agent            wb_master_agent          -     @392      
+        driver                wb_master_driver         -     @419      
+          rsp_port            uvm_analysis_port        -     @436      
+            recording_detail  integral                 32    'd1       
+          seq_item_port       uvm_seq_item_pull_port   -     @427      
+            recording_detail  integral                 32    'd1       
+          recording_detail    integral                 32    'd1       
+        monitor               wb_master_monitor        -     @572      
+          mon_ap              uvm_analysis_port        -     @591      
+            recording_detail  integral                 32    'd1       
+          recording_detail    integral                 32    'd1       
+        sequencer             wb_master_sequencer      -     @447      
+          rsp_export          uvm_analysis_export      -     @455      
+            recording_detail  integral                 32    'd1       
+          seq_item_export     uvm_seq_item_pull_imp    -     @561      
+            recording_detail  integral                 32    'd1       
+          recording_detail    integral                 32    'd1       
+          arbitration_queue   array                    0     -         
+          lock_queue          array                    0     -         
+          num_last_reqs       integral                 32    'd1       
+          num_last_rsps       integral                 32    'd1       
+        is_active             uvm_active_passive_enum  1     UVM_ACTIVE
+        recording_detail      integral                 32    'd1       
+      slave_agent             wb_slave_agent           -     @402      
+        driver                wb_slave_driver          -     @615      
+          rsp_port            uvm_analysis_port        -     @632      
+            recording_detail  integral                 32    'd1       
+          seq_item_port       uvm_seq_item_pull_port   -     @623      
+            recording_detail  integral                 32    'd1       
+          recording_detail    integral                 32    'd1       
+        monitor               wb_slave_monitor         -     @768      
+          mon_ap              uvm_analysis_port        -     @787      
+            recording_detail  integral                 32    'd1       
+          recording_detail    integral                 32    'd1       
+        sequencer             slave_sequencer          -     @643      
+          rsp_export          uvm_analysis_export      -     @651      
+            recording_detail  integral                 32    'd1       
+          seq_item_export     uvm_seq_item_pull_imp    -     @757      
+            recording_detail  integral                 32    'd1       
+          recording_detail    integral                 32    'd1       
+          arbitration_queue   array                    0     -         
+          lock_queue          array                    0     -         
+          num_last_reqs       integral                 32    'd1       
+          num_last_rsps       integral                 32    'd1       
+        is_active             uvm_active_passive_enum  1     UVM_ACTIVE
+        recording_detail      integral                 32    'd1       
+      recording_detail        integral                 32    'd1       
+    scoreboard                wb_scoreboard            -     @384      
+      master_imp              uvm_analysis_imp_master  -     @804      
+        recording_detail      integral                 32    'd1       
+      slave_imp               uvm_analysis_imp_slave   -     @813      
+        recording_detail      integral                 32    'd1       
+      recording_detail        integral                 32    'd1       
+-----------------------------------------------------------------------
+
+UVM_INFO /mnt/NVME2/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/seq/uvm_sequencer_base.svh(1486) @ 0: uvm_test_top.testBench.env.master_agent.sequencer [PHASESEQ] No default phase sequence for phase 'pre_reset'
+UVM_INFO /mnt/NVME2/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/seq/uvm_sequencer_base.svh(1486) @ 0: uvm_test_top.testBench.env.slave_agent.sequencer [PHASESEQ] No default phase sequence for phase 'pre_reset'
+Interrupt at time 0
+
+exit
+            V C S   S i m u l a t i o n   R e p o r t 
+Time: 0 ps
+CPU Time:      3.830 seconds;       Data structure size:   0.6Mb
+Wed Apr 16 10:38:10 2025

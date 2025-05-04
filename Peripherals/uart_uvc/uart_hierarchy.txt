@@ -1,0 +1,61 @@
+Uart_UVC/
+│── doc/
+│   ├── uart_slave_VP.ods
+│   ├── uart_master_VP.ods
+│   ├── uart_system_VP.ods
+│
+│── logs/                      # Stores log files (empty for now)
+│
+│── uart_slave/
+│   ├── sv/
+│   │   ├── uart_slave_if.sv
+│   │   ├── uart_slave_pkg.sv
+│   │   ├── uart_slave_item.sv
+│   │   ├── uart_slave_monitor.sv
+│   │   ├── uart_slave_sequencer.sv
+│   │   ├── uart_slave_driver.sv
+│   │   ├── uart_slave_agent.sv
+│   │   ├── uart_slave_seqs.sv
+│   │   ├── uart_slave_env.sv
+│   ├── tb/
+│   │   ├── uart_slave_tb.sv
+│   │   ├── uart_slave_top.sv
+│   │   ├── uart_slave_test_lib.sv
+│   │   ├── uart_slave_filelist.f
+│   │   ├── run_tests.f
+│
+│── uart_master/
+│   ├── sv/
+│   │   ├── uart_master_if.sv
+│   │   ├── uart_master_pkg.sv
+│   │   ├── uart_master_item.sv
+│   │   ├── uart_master_monitor.sv
+│   │   ├── uart_master_sequencer.sv
+│   │   ├── uart_master_driver.sv
+│   │   ├── uart_master_agent.sv
+│   │   ├── uart_master_seqs.sv
+│   │   ├── uart_master_env.sv
+│   ├── tb/
+│   │   ├── uart_master_tb.sv
+│   │   ├── uart_master_top.sv
+│   │   ├── uart_master_test_lib.sv
+│   │   ├── uart_master_filelist.f
+│   │   ├── run_tests.f
+│
+│── uart_system/
+│   ├── sb/
+│   │   ├── uart_ref_module.sv
+│   │   ├── uart_scoreboard.sv
+│   │   ├── uart_ref_env.sv
+│   ├── tb/
+│   │   ├── uart_hw_dut.sv
+│   │   ├── uart_integ_mcseqs_lib.sv
+│   │   ├── uart_integ_mcsequencer.sv
+│   │   ├── uart_integ_tb.sv
+│   │   ├── uart_integ_top.sv
+│   │   ├── uart_integ_test_lib.sv
+│   │   ├── uart_integ_filelist.f
+│   │   ├── run_tests.f
+│
+│── work/
+│   ├── Makefile

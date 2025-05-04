@@ -1,0 +1,4 @@
+  CREATE_STREAM @0 {NAME:i2c_write_read_seq T:TVM SCOPE:uvm_test_top.tb.i2c.masters[0].sequencer STREAM:1}
+BEGIN @0 {TXH:2 STREAM:1 NAME:i2c_write_read_seq TIME=0  TYPE="Begin_No_Parent, Link" LABEL:"" DESC=""}
+END @0 {TXH:2 TIME=0}
+FREE @0 {TXH:2}

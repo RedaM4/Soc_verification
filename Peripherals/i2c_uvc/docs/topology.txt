@@ -1,0 +1,65 @@
+------------------------------------------------------------------------
+Name                           Type                     Size  Value     
+------------------------------------------------------------------------
+uvm_test_top                   i2c_write_read_test      -     @461      
+  tb                           demo_tb                  -     @477      
+    i2c                        i2c_env                  -     @489      
+      masters[0]               i2c_master_agent         -     @499      
+        driver                 i2c_master_driver        -     @645      
+          rsp_port             uvm_analysis_port        -     @660      
+            recording_detail   uvm_verbosity            32    UVM_FULL  
+          seq_item_port        uvm_seq_item_pull_port   -     @652      
+            recording_detail   uvm_verbosity            32    UVM_FULL  
+          master_id            integral                 32    'h0       
+          recording_detail     uvm_verbosity            32    UVM_FULL  
+        monitor                i2c_master_monitor       -     @521      
+          item_collected_port  uvm_analysis_port        -     @528      
+            recording_detail   uvm_verbosity            32    UVM_FULL  
+          master_id            integral                 32    'h0       
+          recording_detail     uvm_verbosity            32    UVM_FULL  
+        sequencer              i2c_master_sequencer     -     @536      
+          rsp_export           uvm_analysis_export      -     @543      
+            recording_detail   uvm_verbosity            32    UVM_FULL  
+          seq_item_export      uvm_seq_item_pull_imp    -     @637      
+            recording_detail   uvm_verbosity            32    UVM_FULL  
+          master_id            integral                 32    'h0       
+          recording_detail     uvm_verbosity            32    UVM_FULL  
+          arbitration_queue    array                    0     -         
+          lock_queue           array                    0     -         
+          num_last_reqs        integral                 32    'd1       
+          num_last_rsps        integral                 32    'd1       
+        is_active              uvm_active_passive_enum  1     UVM_ACTIVE
+        master_id              integral                 32    'h0       
+        recording_detail       uvm_verbosity            32    UVM_FULL  
+      slaves[0]                i2c_slave_agent          -     @506      
+        driver                 i2c_slave_driver         -     @811      
+          rsp_port             uvm_analysis_port        -     @826      
+            recording_detail   uvm_verbosity            32    UVM_FULL  
+          seq_item_port        uvm_seq_item_pull_port   -     @818      
+            recording_detail   uvm_verbosity            32    UVM_FULL  
+          slave_id             integral                 32    'h0       
+          recording_detail     uvm_verbosity            32    UVM_FULL  
+        monitor                i2c_slave_monitor        -     @687      
+          item_collected_port  uvm_analysis_port        -     @694      
+            recording_detail   uvm_verbosity            32    UVM_FULL  
+          slave_id             integral                 32    'h0       
+          recording_detail     uvm_verbosity            32    UVM_FULL  
+        sequencer              i2c_slave_sequencer      -     @702      
+          rsp_export           uvm_analysis_export      -     @709      
+            recording_detail   uvm_verbosity            32    UVM_FULL  
+          seq_item_export      uvm_seq_item_pull_imp    -     @803      
+            recording_detail   uvm_verbosity            32    UVM_FULL  
+          slave_id             integral                 32    'h0       
+          recording_detail     uvm_verbosity            32    UVM_FULL  
+          arbitration_queue    array                    0     -         
+          lock_queue           array                    0     -         
+          num_last_reqs        integral                 32    'd1       
+          num_last_rsps        integral                 32    'd1       
+        is_active              uvm_active_passive_enum  1     UVM_ACTIVE
+        slave_id               integral                 32    'h0       
+        recording_detail       uvm_verbosity            32    UVM_FULL  
+      num_masters              integral                 32    'h1       
+      num_slaves               integral                 32    'h1       
+      recording_detail         uvm_verbosity            32    UVM_FULL  
+    recording_detail           uvm_verbosity            32    UVM_FULL  
+------------------------------------------------------------------------

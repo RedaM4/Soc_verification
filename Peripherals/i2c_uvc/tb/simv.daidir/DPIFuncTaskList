@@ -1,0 +1,10 @@
+import_DPI vc_uvmCreateRandomSeed uvm_pkg
+import_DPI uvm_hdl_check_path uvm_pkg
+import_DPI uvm_hdl_read uvm_pkg
+import_DPI uvm_dpi_get_next_arg_c uvm_pkg
+import_DPI uvm_dpi_regcomp uvm_pkg
+import_DPI uvm_dpi_regexec uvm_pkg
+import_DPI uvm_dpi_regfree uvm_pkg
+import_DPI uvm_re_match uvm_pkg
+import_DPI uvm_glob_to_re uvm_pkg
+DirectC SdisableFork 
