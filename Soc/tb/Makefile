@@ -1,9 +1,7 @@
 # Peripheral directories
 
-#------------------------
-# NEED TO FIX
-#------------------------
-UART_DIR := ../../Peripherals/uart_wb_uvcs
+
+UART_DIR := ../../Peripherals/uart_uvc
 SPI_DIR  := ../../Peripherals/spi_uvc
 I2C_DIR  := ../../Peripherals/i2c_uvc
 PWM_DIR  := ../../Peripherals/pwm_uvc

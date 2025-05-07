@@ -7,3 +7,14 @@
 [submodule "Peripherals/i2c_uvc"]
 	path = Peripherals/i2c_uvc
 	url = https://github.com/yaserc33/i2c_uvc.git
+[submodule "Peripherals/spi_uvc"]
+	path = Peripherals/spi_uvc
+	url = https://github.com/RahafQahtani/SPI-UVM-.git
+[submodule "Peripherals/gpio_uvc"]
+	path = Peripherals/gpio_uvc
+	url = https://github.com/Mashael29/GPIO.git
+[submodule "Peripherals/pwm_uvc"]
+	path = Peripherals/pwm_uvc
+	url = https://github.com/s7hd/ptc.git
+
+# git submodule add https://github.com/yaserc33/i2c_uvc.git Peripherals/i2c_uvc
