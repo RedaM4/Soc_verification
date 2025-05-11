@@ -1,11 +1,11 @@
 class soc_mcsequencer extends uvm_sequencer;
-  `uvm_component_utils()
+  `uvm_component_utils(soc_mcsequencer)
 
 
 
-    uart_rx_sequencer  uart_seqr ; 
-    wb_master_sequencer wb_sequencer; 
-
+    // uart_rx_sequencer  uart_seqr ; 
+    wb_master_sequencer wb_seqr; 
+spi_master_sequencer spi_m_seqr ; 
   //--------------------------------------------------------
   //Constructor
   //--------------------------------------------------------

@@ -4,77 +4,80 @@ module hw_top;
   logic [31:0]  clock_period;
   logic         run_clock;
 
+logic cs,sclk ; 
 
-
-uart_if in_uart(clock) ; 
+// uart_if in_uart(clock) ; 
 wb_if in_wb(clock,reset);
-
+spi_if in_spi(clock,reset,sclk,cs)
 
 
 //***************************************************
-//   NEEDS TO CHECK
+//   SOC HW
 //***************************************************
-  initial begin
-    reset <= 1'b0;
-    @(negedge clock)
-      #1 reset <= 1'b1;
-    @(negedge clock)
-      #1 reset <= 1'b0;
-  end
+    logic O_UART_TX_PAD;
+     logic I_UART_RX_PAD;
+     logic [23:0] IO_GPIO_PAD; 
   
+  //spi1 addrs 
+  /*  
+  gpio[19] = spi1_ssl
+  gpio[20] = spi1_ss0
+  gpio[21] = spi1_sck
+  gpio[22] = spi1_miso
+  gpio[23] = spi1_mosi
+  */
+ 
 
-// later we need it 
-//  wb_soc_top wb_top (
+pads #(
+    .DMEM_DEPTH(128),
+    .IMEM_DEPTH(128)
+) DUT (
+    .O_UART_TX_PAD(O_UART_TX_PAD),
+    .I_UART_RX_PAD(I_UART_RX_PAD),
+    .IO_GPIO_PAD(IO_GPIO_PAD),
+    .CLK_PAD(clock),
+    .RESET_PAD(reset)
+);
 
-//     .wb_clk(clock),
-//     .wb_rst(reset),
-//     .wb_m2s_adr(in_wb.ADR_O),
-//     .wb_m2s_dat(in_wb.DAT_I), 
-//     .wb_m2s_sel(), 
-//     .wb_m2s_we(in_wb.WE_O),
-//     .wb_m2s_cyc(in_wb.CYC_O),
-//     .wb_m2s_stb(in_wb.STB_O),
-//     .wb_s2m_dat(in_wb.DAT_O), 
-//     .wb_s2m_ack(in_wb.ACK_I),
+//in_wb signals
+  // logic       [31:0]    ADR_O;
+  // logic       [7:0]     DAT_I;
+  // logic       [7:0]     DAT_O;
+  // logic                 WE_O;
+  // logic                 STB_O;
+  // logic                 ACK_I;
+  // logic                 CYC_O;
+
+//rv32i_soc signals 
+  // MY_TODO: IO ( wb master signals )
+  // the data I in the interface is 32 bits
+  logic [31:0] wb_io_adr_i;  // from --> .wb_adr_o
+  logic [31:0] wb_io_dat_i;  // from --> .wb_dat_o 
+  logic [ 3:0] wb_io_sel_i;  // from --> .wb_sel_o
+  logic        wb_io_we_i;  // from --> .wb_we_o
+  logic        wb_io_cyc_i;  // from --> .wb_cyc_o
+  logic        wb_io_stb_i;  // from --> .wb_stb_o
+
+
+
+
+always @(*)begin 
+  force DUT.rv32_soc.wb_io_adr_i = in_wb.ADR_O;
+  force DUT.rv32_soc.wb_io_dat_i = in_wb.DAT_O;
+  //there is no sel signal in the interface of the wb
+  // force DUT.rv32_soc.wb_io_sel_i = 4'b1111; // assuming all bytes selected
   
-//     // uart
-//     .o_uart_tx(in_uart.tx),
-//     .i_uart_rx(in_uart.rx)
-// );
+  force DUT.rv32_soc.wb_io_we_i  = in_wb.WE_O;
+  force DUT.rv32_soc.wb_io_stb_i = in_wb.STB_O;
+  force DUT.rv32_soc.wb_io_cyc_i = in_wb.CYC_O;
 
-uart_top uart16550_0(// Wishbone slave interface
+end
 
-         .wb_clk_i	(clock),
-         .wb_rst_i	(reset),
-         .wb_adr_i	(in_wb.ADR_O),
-         .wb_dat_i	(in_wb.DAT_O),
-         .wb_we_i	  (in_wb.WE_O),
-         .wb_cyc_i	(in_wb.CYC_O),
-         .wb_stb_i	(in_wb.STB_O),
-         .wb_sel_i	(4'b0), // Not used in 8-bit mode
-         .wb_dat_o	(in_wb.DAT_I),
-         .wb_ack_o	(in_wb.ACK_I),
+assign in_spi.cs    = gpio_pads[19]; // or gpio_pads[20], based on which slave
+assign in_spi.sclk  = gpio_pads[21];
+assign in_spi.miso  = gpio_pads[22]; // input from slave
+assign gpio_pads[23] = spi1_if.mosi;  // output to slave
 
-
-         // Outputs
-         .int_o     (),
-         .stx_pad_o (in_uart.tx),
-         .rts_pad_o (),
-         .dtr_pad_o (),
-
-         // Inputs
-         .srx_pad_i (in_uart.rx),
-         .cts_pad_i (1'b0),
-         .dsr_pad_i (1'b0),
-         .ri_pad_i  (1'b0),
-         .dcd_pad_i (1'b0)
-         );
-
-// qb signal 
-        //  .o_uart_tx(in_uart.tx),
-        //  .i_uart_rx(in_uart.rx)
-         
-         
 
 
 

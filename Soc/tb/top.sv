@@ -4,10 +4,12 @@ module top();
 `include "uvm_macros.svh"
 
 
-import uart_pkg::*;
+// import uart_pkg::*;
 import wb_pkg::*;
 import clock_and_reset_pkg::*;
+import spi_pkg::*;
 
+import soc_pkg::* ; 
 
 
 
@@ -32,7 +34,9 @@ initial begin
 //check path
 
     //=============================================
-    uart_vif_config::set(null,"*tb.uartenv.*","vif",dut.in_uart); 
+    // uart_vif_config::set(null,"*tb.uartenv.*","vif",dut.in_uart); 
+    spi_vif_config::set(null,"*tb.spi_env.*","vif",dut.in_spi);
+
     wb_vif_config::set(null,"*tb.wbenv.*","vif",dut.in_wb);
     clock_and_reset_vif_config::set(null , "*tb.clk_rst_env.*" , "vif" , dut.clk_rst_if);
     

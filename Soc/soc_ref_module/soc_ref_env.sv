@@ -12,12 +12,16 @@ class soc_ref_env extends uvm_env;
 soc_ref_model ro_ref;
 // router_scb ro_scb  ;
 // hbus_monitor hbus_mon ;  
-
+  wb_x_spi_module spiref_model;
+soc_scb scb ; 
  router_reference ro_ref;
    function void build_phase(uvm_phase phase);
     super.build_phase(phase);
+scb = soc_scb::type_id::create("scb", this);
 
 soc_ref = soc_ref_model::type_id::create("soc_ref", this) ; 
+spiref_model = wb_x_spi_module::type_id::create("spiref_model", this);
+
 
 // ro_ref = router_reference::type_id::create("ro_ref", this) ; 
 // ro_scb = router_scb::type_id::create("ro_scb", this) ; 
@@ -28,9 +32,9 @@ endfunction
  function void connect_phase(uvm_phase phase);
     super.connect_phase(phase);
 // hbus_mon.item_collected_port.connect(ro_ref.hbus_in);
-
-
 // ro_ref.yapp_valid_port.connect(ro_scb.yapp_in) ; 
+
+// scb.ref_model=spiref_model ; // IDK???????????
 
 
 endfunction

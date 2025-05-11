@@ -37,13 +37,17 @@ endclass : soc_mcseq_lib
 
 
 
-class router_simple_mcseq extends base_seq;
+class spi_simple_seq extends base_seq;
   
-    `uvm_object_utils(router_simple_mcseq)
+    `uvm_object_utils(spi_simple_seq)
 
-`uvm_declare_p_sequencer(uart_var_mcsequencer)
+`uvm_declare_p_sequencer(soc_mcsequencer)
+
+//spi_m_seqr
+
   DataGen_seq DataGen;
-  uart_5_seq uart_seq;
+  // uart_5_seq uart_seq;
+spi_write_seq spi_m_write ; 
 
   function new(string name = "router_simple_mcseq");
     super.new(name);
@@ -52,9 +56,10 @@ class router_simple_mcseq extends base_seq;
 
 
   task body();
-    `uvm_info(get_type_name(), "Starting UART Master Control Sequence", UVM_MEDIUM)
-    // `uvm_do_on(DataGen, p_sequencer.wb_seqr)
-    // `uvm_do_on(uartSeq, p_sequencer.wb_seqr)
-    `uvm_info(get_type_name(), "Finished UART Master Control Sequence", UVM_MEDIUM)
+    // `uvm_info(get_type_name(), "Starting UART Master Control Sequence", UVM_MEDIUM)
+    `uvm_do_on(DataGen, p_sequencer.wb_seqr)
+     `uvm_do_on(spi_m_write, p_sequencer.spi_m_seqr)
+
+    // `uvm_info(get_type_name(), "Finished UART Master Control Sequence", UVM_MEDIUM)
   endtask
 endclass 

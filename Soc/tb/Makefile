@@ -11,7 +11,7 @@ GPIO_DIR := ../../Peripherals/gpio_uvc
 CORE_DIR := ../../RV32_SoC/
 
 # Filelists
-CORE_LIST := $(CORE_DIR)/module_path.f
+CORE_LIST := rtl_filelist.f
 MODULES_LIST := filelist.f
 
 # Git pulls
