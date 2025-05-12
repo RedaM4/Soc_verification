@@ -1,22 +1,27 @@
 class soc_scb extends uvm_scoreboard;
- `uvm_component_utils(router_scb)
-//     uvm_analysis_imp_wb_out  #(n_cpu_transaction, uart_ver_scoreboard) wb_out_imp;
-    // `uvm_analysis_imp_decl(_wb_out)
+ `uvm_component_utils(soc_scb)
+  uvm_analysis_port#(wb_transaction) scb_port;
+
+    `uvm_analysis_imp_wb #(wb_transaction, soc_scb) wb_ref_in;
+    `uvm_analysis_imp_decl(_wb)
+    
+    `uvm_analysis_imp_spi1 #(spi_transaction, soc_scb) spi_in1;
+    `uvm_analysis_imp_decl(_spi1)
 
 
- function new(string name = "uart_ver_scoreboard", uvm_component parent);
+ function new(string name = "soc_scb", uvm_component parent);
     super.new(name, parent);
     `uvm_info("SCB_CLASS", "Inside Constructor!", UVM_HIGH)
     // //UART
     // uart_tx_imp = new("uart_tx_imp", this);
     // uart_rx_imp = new("uart_rx_imp", this);
-    // wb_in_imp   = new("wb_in_imp", this);
+    wb_ref_in   = new("wb_ref_in", this);
     // wb_out_imp  = new("wb_out_imp", this);
 
 //SPI
   spi_in1 = new("spi_in1", this);
     // spi_in2 = new("spi_in2", this);
-    ref_in  = new("ref_in", this);
+    // ref_in  = new("ref_in", this);
 
 
 
@@ -89,14 +94,14 @@ class soc_scb extends uvm_scoreboard;
 //**********************
 
  // Analysis ports
-  `uvm_analysis_imp_decl(_spi1)
-  uvm_analysis_imp_spi1#(spi_transaction, scoreboard) spi_in1;
+  // `uvm_analysis_imp_decl(_spi1)
+  // uvm_analysis_imp_spi1#(spi_transaction, scoreboard) spi_in1;
 
   // `uvm_analysis_imp_decl(_spi2)
   // uvm_analysis_imp_spi2#(spi_transaction, scoreboard) spi_in2;
 
-  `uvm_analysis_imp_decl(_spi1ref)
-  uvm_analysis_imp_spi1ref#(wb_transaction, scoreboard) ref_in;
+  // `uvm_analysis_imp_decl(_spi1ref)
+  // uvm_analysis_imp_spi1ref#(wb_transaction, scoreboard) ref_in;
 
   // Stats
   int total_packets_received = 0;
@@ -122,7 +127,7 @@ class soc_scb extends uvm_scoreboard;
 
 
   // Reference Model callback
-  function void write_spi1ref(wb_transaction t);
+  function void write_wb(wb_transaction t);
     `uvm_info("SCOREBOARD", $sformatf("Received REF Transaction: %s", t.sprint()), UVM_MEDIUM)
      if(t.addr ==2) begin
     ref_model.tx_queue.push_back(t.din);

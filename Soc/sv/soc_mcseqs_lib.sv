@@ -47,7 +47,7 @@ class spi_simple_seq extends base_seq;
 
   DataGen_seq DataGen;
   // uart_5_seq uart_seq;
-spi_write_seq spi_m_write ; 
+spi_slave_write_seq spi_s_write ; 
 
   function new(string name = "router_simple_mcseq");
     super.new(name);
@@ -58,7 +58,7 @@ spi_write_seq spi_m_write ;
   task body();
     // `uvm_info(get_type_name(), "Starting UART Master Control Sequence", UVM_MEDIUM)
     `uvm_do_on(DataGen, p_sequencer.wb_seqr)
-     `uvm_do_on(spi_m_write, p_sequencer.spi_m_seqr)
+     `uvm_do_on(spi_s_write, p_sequencer.spi_s_seqr)
 
     // `uvm_info(get_type_name(), "Finished UART Master Control Sequence", UVM_MEDIUM)
   endtask

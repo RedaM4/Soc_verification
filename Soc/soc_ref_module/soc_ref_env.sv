@@ -9,17 +9,17 @@ class soc_ref_env extends uvm_env;
 
 
 
-soc_ref_model ro_ref;
+wb_ref_model wb_ref;
 // router_scb ro_scb  ;
 // hbus_monitor hbus_mon ;  
   wb_x_spi_module spiref_model;
 soc_scb scb ; 
- router_reference ro_ref;
+//  router_reference ro_ref;
    function void build_phase(uvm_phase phase);
     super.build_phase(phase);
 scb = soc_scb::type_id::create("scb", this);
 
-soc_ref = soc_ref_model::type_id::create("soc_ref", this) ; 
+wb_ref = wb_ref_model::type_id::create("wb_ref", this) ; 
 spiref_model = wb_x_spi_module::type_id::create("spiref_model", this);
 
 
@@ -31,6 +31,18 @@ endfunction
 
  function void connect_phase(uvm_phase phase);
     super.connect_phase(phase);
+//TODO: psuedo code
+
+//connect wb_ref to scb
+wb_ref.wb_ref_port.connect(scb.wb_ref_in);
+
+
+//connect wb_ref to spiref_model
+wb_ref.wb_ref_port.connect(spiref_model.wb_in);
+
+
+
+
 // hbus_mon.item_collected_port.connect(ro_ref.hbus_in);
 // ro_ref.yapp_valid_port.connect(ro_scb.yapp_in) ; 
 

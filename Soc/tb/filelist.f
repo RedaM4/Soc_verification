@@ -5,9 +5,9 @@
 
 
 // ========== wb_uvc ==========
-+incdir+../../wb_uvc/sv
-../../Peripherals/uart_uvc/sv/wb_pkg.sv
-../../Peripherals/uart_uvc/sv/wb_if.sv
++incdir+../../Soc/wb_bfm/sv
+../../Soc/wb_bfm/sv/wb_pkg.sv
+../../Soc/wb_bfm/sv/wb_if.sv
 
 
 // ========== clock_and_reset ==========
@@ -21,6 +21,9 @@
 ../../Peripherals/spi_uvc/sv/spi_pkg.sv         
 ../../Peripherals/spi_uvc/sv/spi_if.sv         
 
+// ========== spi ref_model ==========
++incdir+../../Peripherals/spi_uvc/wb_x_spi_module/sv
+../../Peripherals/spi_uvc/wb_x_spi_module/sv/spi_module_pkg.sv         
 
 // ========== SOC ==========
 +incdir+../../Soc/tb

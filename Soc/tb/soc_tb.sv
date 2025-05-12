@@ -32,16 +32,16 @@ spi_env spi_env;
     super.connect_phase(phase);
     //sequencers connection to mc_seqr
      soc_mcsequencer.wb_seqr = wbenv.master_agent.sequencer;  
-    soc_mcsequencer.spi_s_seqr =spi1.master_agent.seqr;
+    soc_mcsequencer.spi_s_seqr =spi1.slave_agent.seqr;
 
 
     //wb to soc_ref
     wbenv.master_agent.monitor.mon_ap.connect(soc_refenv.soc_ref.wb_in);
     // TLM connections between spi and Scoreboard
-    spi_env.master_agent.mon.spi_out.connect(soc_refenv.scb.spi_in1); 
+    spi_env.slave_agent.mon.spi_out.connect(soc_refenv.scb.spi_in1); 
 
    // TLM connections between Refrence model and scoreborad 
-    soc_refenv.sref_model.ref_analysis_port.connect(soc_refenv.scb.ref_in);
+    // soc_refenv.sref_model.ref_analysis_port.connect(soc_refenv.scb.ref_in);
 
     endfunction
 
