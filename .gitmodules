@@ -5,9 +5,9 @@
 	path = Peripherals/uart_uvc
 	url = https://github.com/RedaM4/uart_wb_uvcs.git
 
-[submodule "Peripherals/uart_uvc/core-verification"]
-	path = Peripherals/uart_uvc/core-verification
-	url = https://github.com/google/riscv-dv.git
+# [submodule "Peripherals/uart_uvc/core-verification"]
+# 	path = Peripherals/uart_uvc/core-verification
+# 	url = https://github.com/google/riscv-dv.git
 
 [submodule "Peripherals/i2c_uvc"]
 	path = Peripherals/i2c_uvc
