@@ -1,12 +1,15 @@
 class wb_ref_model extends uvm_component;
   `uvm_component_utils(wb_ref_model)
+//sending to scb
+uvm_analysis_port #(wb_transaction) wb2scb_port;
 
-uvm_analysis_port #(wb_transaction) wb_ref_port;
+uvm_analysis_port #(wb_transaction) wb2spi1ref_port;
 
 
-//   `uvm_analysis_imp_decl(_hbus)
+
+// port for the wb uvc)
   `uvm_analysis_imp_decl(_wb)
-  uvm_analysis_imp_wb#(wb_transaction, wb_ref_model) wb_in; // need to fix
+  uvm_analysis_imp_wb#(wb_transaction, wb_ref_model) wb_in; 
 
 //   uvm_analysis_imp_hbus#(hbus_transaction, router_reference) hbus_in;
 
@@ -31,8 +34,8 @@ function void write_wb(wb_transaction tr);   // type need to be fixed
  if (tr.addr >= 32'h00000000 && tr.addr <= 32'h0000000F) begin
         // SPI_1
 
-        ref_analysis_port.write_wb(tr);
-        scb_port.write_wb(tr);
+        wb2scb_port.write(tr);
+        wb2spi1ref_port.write(tr);
        $display("SPI_1 transaction received (addr: %h)", tr.addr);
 
     end

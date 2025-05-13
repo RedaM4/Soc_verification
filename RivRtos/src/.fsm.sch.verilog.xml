@@ -1,0 +1,89 @@
+<Command name="schRTLInfo"  delimiter="."  >
+<RTLBlock >
+<RTLInfo   name="wbstate_0"  type="2"  fileName="soc/uncore/uart/uart_wb.v"  >
+    <Seg beginLine="186"  endLine="207"  />
+  </RTLInfo>
+ <Instance name="rv32i_soc_tb.DUT.uart16550_0.wb_interface"  />
+</RTLBlock>
+<RTLBlock >
+<RTLInfo   name="state_1"  type="2"  fileName="soc/core/iadu.sv"  >
+    <Seg beginLine="65"  endLine="82"  />
+  </RTLInfo>
+ <Instance name="rv32i_soc_tb.DUT.rv32i_core_inst.data_path_inst.iadu_inst"  />
+</RTLBlock>
+<RTLBlock >
+<RTLInfo   name="rstate_2"  type="2"  fileName="soc/uncore/uart/uart_receiver.v"  >
+    <Seg beginLine="277"  endLine="390"  />
+  </RTLInfo>
+ <Instance name="rv32i_soc_tb.DUT.uart16550_0.regs.receiver"  />
+</RTLBlock>
+<RTLBlock >
+<RTLInfo   name="state_3"  type="2"  fileName="soc/uncore/plic/plic_gateway.sv"  >
+    <Seg beginLine="35"  endLine="52"  />
+  </RTLInfo>
+ <Instance name="rv32i_soc_tb.DUT.plic_inst.gw[1].gateway_i"  />
+<Instance name="rv32i_soc_tb.DUT.plic_inst.gw[2].gateway_i"  />
+<Instance name="rv32i_soc_tb.DUT.plic_inst.gw[3].gateway_i"  />
+<Instance name="rv32i_soc_tb.DUT.plic_inst.gw[4].gateway_i"  />
+<Instance name="rv32i_soc_tb.DUT.plic_inst.gw[5].gateway_i"  />
+<Instance name="rv32i_soc_tb.DUT.plic_inst.gw[6].gateway_i"  />
+</RTLBlock>
+<RTLBlock >
+<RTLInfo   name="state_4"  type="2"  fileName="soc/uncore/spi/simple_spi_top.v"  >
+    <Seg beginLine="265"  endLine="312"  />
+  </RTLInfo>
+ <Instance name="rv32i_soc_tb.DUT.spi1"  />
+<Instance name="rv32i_soc_tb.DUT.spi2"  />
+</RTLBlock>
+<RTLBlock >
+<RTLInfo   name="state_5"  type="2"  fileName="soc/core/atomic_extension.sv"  >
+    <Seg beginLine="77"  endLine="171"  />
+  </RTLInfo>
+ <Instance name="rv32i_soc_tb.DUT.rv32i_core_inst.data_path_inst.aac_inst"  />
+</RTLBlock>
+<RTLBlock >
+<RTLInfo   name="c_state_6"  type="2"  fileName="soc/uncore/i2c/rtl/i2c_master_bit_ctrl.v"  >
+    <Seg beginLine="380"  endLine="546"  />
+  </RTLInfo>
+ <Instance name="rv32i_soc_tb.DUT.i2c_master_inst.byte_controller.bit_controller"  />
+</RTLBlock>
+<RTLBlock >
+<RTLInfo   name="tstate_7"  type="2"  fileName="soc/uncore/uart/uart_transmitter.v"  >
+    <Seg beginLine="210"  endLine="296"  />
+  </RTLInfo>
+ <Instance name="rv32i_soc_tb.DUT.uart16550_0.regs.transmitter"  />
+</RTLBlock>
+<RTLBlock >
+<RTLInfo   name="rptc_ctrl_8"  type="2"  fileName="soc/uncore/ptc/ptc_top.v"  >
+    <Seg beginLine="193"  endLine="341"  />
+  </RTLInfo>
+ <Instance name="rv32i_soc_tb.DUT.ptc_top_inst"  />
+</RTLBlock>
+<RTLBlock >
+<RTLInfo   name="pstate_9"  type="2"  fileName="soc/core/core_dbg_fsm.sv"  >
+    <Seg beginLine="40"  endLine="48"  />
+  </RTLInfo>
+ <Instance name="rv32i_soc_tb.DUT.rv32i_core_inst.u_core_dbg_fsm"  />
+</RTLBlock>
+<RTLBlock >
+<RTLInfo   name="abstractcs_10"  type="2"  fileName="soc/debug/dm.sv"  >
+    <Seg beginLine="123"  endLine="134"  />
+  </RTLInfo>
+ <RTLInfo   name="pstate_11"  type="2"  fileName="soc/debug/dm.sv"  >
+    <Seg beginLine="160"  endLine="193"  />
+  </RTLInfo>
+ <Instance name="rv32i_soc_tb.DUT.debug_top_inst.dm_inst"  />
+</RTLBlock>
+<RTLBlock >
+<RTLInfo   name="c_state_12"  type="2"  fileName="soc/uncore/i2c/rtl/i2c_master_byte_ctrl.v"  >
+    <Seg beginLine="209"  endLine="279"  />
+  </RTLInfo>
+ <Instance name="rv32i_soc_tb.DUT.i2c_master_inst.byte_controller"  />
+</RTLBlock>
+<RTLBlock >
+<RTLInfo   name="pstate_13"  type="2"  fileName="soc/debug/dtm.sv"  >
+    <Seg beginLine="39"  endLine="60"  />
+  </RTLInfo>
+ <Instance name="rv32i_soc_tb.DUT.debug_top_inst.dtm_inst"  />
+</RTLBlock>
+ </Command>

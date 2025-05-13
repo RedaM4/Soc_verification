@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1746107609.375317537, "rt":1.93, "ut":1.63, "st":0.25}}
+{"vcselab":{"timestamp_begin":1746107611.389772977, "rt":0.36, "ut":0.24, "st":0.11}}
+{"link":{"timestamp_begin":1746107611.806222646, "rt":0.32, "ut":0.20, "st":0.13}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1746107609.019231839}
+{"VCS_COMP_START_TIME": 1746107609.019231839}
+{"VCS_COMP_END_TIME": 1746107612.228742523}
+{"VCS_USER_OPTIONS": "-full64 -sverilog -f filelist.f tb/SimJTAG.cc tb/remote_bitbang.cc -cc g++ -CFLAGS -std=c++11 -Itb -debug_all -o simv"}
+{"vcs1": {"peak_mem": 318796}}
+{"vcselab": {"peak_mem": 183844}}

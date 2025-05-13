@@ -37,7 +37,7 @@ endclass : soc_mcseq_lib
 
 
 
-class spi_simple_seq extends base_seq;
+class spi_simple_seq extends soc_mcseq_lib;
   
     `uvm_object_utils(spi_simple_seq)
 
@@ -45,7 +45,7 @@ class spi_simple_seq extends base_seq;
 
 //spi_m_seqr
 
-  DataGen_seq DataGen;
+  enable_spi_core enable_spi;
   // uart_5_seq uart_seq;
 spi_slave_write_seq spi_s_write ; 
 
@@ -57,7 +57,7 @@ spi_slave_write_seq spi_s_write ;
 
   task body();
     // `uvm_info(get_type_name(), "Starting UART Master Control Sequence", UVM_MEDIUM)
-    `uvm_do_on(DataGen, p_sequencer.wb_seqr)
+    `uvm_do_on(enable_spi, p_sequencer.wb_seqr)
      `uvm_do_on(spi_s_write, p_sequencer.spi_s_seqr)
 
     // `uvm_info(get_type_name(), "Finished UART Master Control Sequence", UVM_MEDIUM)

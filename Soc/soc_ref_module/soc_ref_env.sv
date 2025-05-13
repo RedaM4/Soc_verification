@@ -34,11 +34,11 @@ endfunction
 //TODO: psuedo code
 
 //connect wb_ref to scb
-wb_ref.wb_ref_port.connect(scb.wb_ref_in);
+wb_ref.wb2scb_port.connect(scb.wb_in);
 
 
 //connect wb_ref to spiref_model
-wb_ref.wb_ref_port.connect(spiref_model.wb_in);
+wb_ref.wb2spi1ref_port.connect(spiref_model.wb_in);
 
 
 

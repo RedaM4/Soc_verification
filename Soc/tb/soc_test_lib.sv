@@ -1,3 +1,5 @@
+//  `include "uvm_macros.svh"
+//   import uvm_pkg::*;
 class base_test extends uvm_test;   
          `uvm_component_utils(base_test)
 
@@ -16,9 +18,9 @@ function void build_phase(uvm_phase phase);
 uvm_config_int::set(this,"tb.wbenv.master_agent","is_active",UVM_ACTIVE);  //wb master
 uvm_config_int::set(this,"tb.wbenv.slave_agent","is_active",UVM_PASSIVE);   //wb slave 
 
- uvm_config_wrapper::set(this, "tb.wbenv.master_agent.sequencer.run_phase","default_sequence", uart_configAndRead_5::get_type()); //wb seq
+ uvm_config_wrapper::set(this, "tb.wbenv.master_agent.sequencer.run_phase","default_sequence", enable_spi_core::get_type()); //wb seq
     // uvm_config_wrapper::set(this,"tb.uartenv.tx_agent.seqr.run_phase", "default_sequence", uart_2_seq::get_type());
-uvm_config_wrapper::set(this, "tb.spi_env.slave_agent.seqr.run_phase",  "default_sequence", read_seq::get_type()); 
+uvm_config_wrapper::set(this, "tb.spienv.slave_agent.seqr.run_phase",  "default_sequence", spi_slave_write_seq::get_type()); 
 
    uvm_config_wrapper::set(this, "*clk_rst*", "default_sequence", clk10_rst5_seq::get_type());
 

@@ -1,12 +1,12 @@
 class soc_scb extends uvm_scoreboard;
  `uvm_component_utils(soc_scb)
-  uvm_analysis_port#(wb_transaction) scb_port;
+  // uvm_analysis_port#(wb_transaction) scb_port;
 
-    `uvm_analysis_imp_wb #(wb_transaction, soc_scb) wb_ref_in;
     `uvm_analysis_imp_decl(_wb)
+    uvm_analysis_imp_wb#(wb_transaction, soc_scb) wb_in;
     
-    `uvm_analysis_imp_spi1 #(spi_transaction, soc_scb) spi_in1;
     `uvm_analysis_imp_decl(_spi1)
+    uvm_analysis_imp_spi1#(spi_transaction, soc_scb) spi_in1;
 
 
  function new(string name = "soc_scb", uvm_component parent);
@@ -15,7 +15,7 @@ class soc_scb extends uvm_scoreboard;
     // //UART
     // uart_tx_imp = new("uart_tx_imp", this);
     // uart_rx_imp = new("uart_rx_imp", this);
-    wb_ref_in   = new("wb_ref_in", this);
+    wb_in   = new("wb_in", this);
     // wb_out_imp  = new("wb_out_imp", this);
 
 //SPI

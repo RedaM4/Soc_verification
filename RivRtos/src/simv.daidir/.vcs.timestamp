@@ -1,0 +1,296 @@
+0
+89
++define+VCS_SIM
++define+tracer
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/mnt/NVME2/synopsys/vcs/W-2024.09-SP1/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /mnt/NVME2/synopsys/vcs/W-2024.09-SP1/linux64/lib/libvirsim.so /mnt/NVME2/synopsys/vcs/W-2024.09-SP1/linux64/lib/liberrorinf.so /mnt/NVME2/synopsys/vcs/W-2024.09-SP1/linux64/lib/libsnpsmalloc.so /mnt/NVME2/synopsys/vcs/W-2024.09-SP1/linux64/lib/libvfs.so
+-Mout=simv
+-Msaverestoreobj=/mnt/NVME2/synopsys/vcs/W-2024.09-SP1/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/mnt/NVME2/synopsys/vcs/W-2024.09-SP1/include
+-Mxllcflags=
+-Xfile_begin_f=filelist.f
+-Xfile_end
+-full64
+-gen_obj
+-picarchive
+-sverilog
+-timescale=1ns/10ps
+/mnt/NVME2/synopsys/vcs/W-2024.09-SP1/linux64/bin/vcs1
+soc/core/lib.sv
+soc/debug/debug_pkg.sv
+soc/core/alignment_units.sv
+soc/core/alu_control.sv
+soc/core/mul.sv
+soc/core/div.sv
+soc/core/branch_controller.sv
+soc/core/csr_file.sv
+soc/core/imm_gen.sv
+soc/core/main_control.sv
+soc/core/reg_file.sv
+soc/core/rom.sv
+soc/core/forwarding_unit.sv
+soc/core/hazard_controller.sv
+soc/core/pipeline_controller.sv
+soc/core/decompressor.sv
+soc/core/iadu.sv
+soc/core/atomic_extension.sv
+soc/core/exception_encoder.sv
+soc/core/alu.sv
+soc/core/data_path.sv
+soc/core/control_unit.sv
+soc/core/core_dbg_fsm.sv
+soc/core/rv32i_top.sv
+soc/WishboneInterconnect/wb_intercon_1.2.2-r1/wb_mux.v
+soc/WishboneInterconnect/wb_intercon.sv
+soc/WishboneInterconnect/wishbone_controller.sv
+soc/uncore/gpio/gpio_defines.v
+soc/uncore/gpio/bidirec.sv
+soc/uncore/gpio/gpio_top.sv
+soc/uncore/spi/fifo4.v
+soc/uncore/spi/simple_spi_top.v
+soc/uncore/uart/uart_defines.v
+soc/uncore/uart/raminfr.v
+soc/uncore/uart/uart_receiver.v
+soc/uncore/uart/uart_regs.v
+soc/uncore/uart/uart_rfifo.v
+soc/uncore/uart/uart_sync_flops.v
+soc/uncore/uart/uart_tfifo.v
+soc/uncore/uart/uart_top.v
+soc/uncore/uart/uart_transmitter.v
+soc/uncore/uart/uart_wb.v
+soc/uncore/clint/clint_wb.sv
+soc/uncore/clint/clint_top.sv
+soc/uncore/ptc/ptc_defines.v
+soc/uncore/ptc/ptc_top.v
+soc/uncore/i2c/rtl/i2c_master_defines.v
+soc/uncore/i2c/rtl/i2c_master_bit_ctrl.v
+soc/uncore/i2c/rtl/i2c_master_byte_ctrl.v
+soc/uncore/i2c/rtl/i2c_master_top.v
+soc/uncore/plic/plic_pkg.sv
+soc/uncore/plic/plic_gateway.sv
+soc/uncore/plic/plic_core.sv
+soc/uncore/plic/plic_top.sv
+soc/debug/dtm.sv
+soc/debug/dm.sv
+soc/debug/debug_top.sv
+soc/core/sram_wrapper.sv
+soc/core/data_mem.sv
+soc/io_mux.sv
+soc/rv32i_soc.sv
+tb/rv32i_soc_tb.sv
+124
+which_declare=declare -f
+XRDP_SOCKET_PATH=/run/xrdp/1052
+XRDP_SESSION=1238268
+XRDP_PULSE_SOURCE_SOCKET=xrdp_chansrv_audio_in_socket_24
+XRDP_PULSE_SINK_SOCKET=xrdp_chansrv_audio_out_socket_24
+XDG_SESSION_ID=c23
+XDG_RUNTIME_DIR=/run/user/1052
+XDG_MENU_PREFIX=xfce-
+XDG_DATA_DIRS=/home/qamar/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/usr/share
+XDG_CURRENT_DESKTOP=XFCE
+XDG_CONFIG_DIRS=/etc/xdg
+XA_HOME=/mnt/NVME2/synopsys/xa/W-2024.09-SP1
+VUI_HOME=/mnt/NVME2/synopsys/vui/W-2024.09-SP2
+VTRAN_HOME=/mnt/NVME2/synopsys/vtran/W-2024.09-SP2
+VTE_VERSION=5204
+VMR_MODE_FLAG=64
+VGEN_HOME=/mnt/NVME2/synopsys/vgen/W-2024.09-SP2
+VERDI_HOME=/mnt/NVME2/synopsys/verdi/W-2024.09
+VC_STATIC_HOME=/mnt/NVME2/synopsys/vc_static
+VC_ML_PLATFORM_HOME=/mnt/NVME2/synopsys/vc_ml_platform
+VC_FORMAL_HOME=/mnt/NVME2/synopsys/vc_formal
+VCS_PYTHON3=/mnt/NVME2/synopsys/vcs/W-2024.09-SP1/linux64/bin/Python3/bin/python3
+VCS_PATHMAP_PRELOAD_DONE=1
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_INTERNAL_CONVERTEDLIBS=
+VCS_HOME=/mnt/NVME2/synopsys/vcs/W-2024.09-SP1
+VCS_EXEC_DONE=1
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux64
+VCAP_HOME=/mnt/NVME2/synopsys/vcap
+UVM_HOME=/mnt/NVME2/synopsys/vcs/V-2023.12-SP2-1-T-20240806/etc/uvm-1.2
+UNAME=/bin/uname
+UFE_OPTIONAL_SPYGLASS_VCS_HOME=/mnt/NVME2/synopsys/ufe_optional_spyglass-vcs
+TXS_HOME=/mnt/NVME2/synopsys/txs
+TWEAKER_HOME=/mnt/NVME2/synopsys/tweaker
+TOOL_HOME=/mnt/NVME2/synopsys/vcs/W-2024.09-SP1/linux64
+TESTMAX_HOME=/mnt/NVME2/synopsys/testmax
+TCM_HOME=/mnt/NVME2/synopsys/tcm
+SYN_HOME=/mnt/NVME2/synopsys/syn
+STARRC_HOME=/mnt/NVME2/synopsys/starrc
+SSH_AUTH_SOCK=/tmp/ssh-Jq47CcW6v7EN/agent.1238285
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SSH_AGENT_PID=1238422
+SPYGLASS_HOME=/mnt/NVME2/synopsys/spyglass/W-2024.09-SP1/SPYGLASS_HOME
+SPIKE_PATH=/usr/bin
+SNPS_VCS_PYTHON3=/mnt/NVME2/synopsys/vcs/W-2024.09-SP1/linux64/bin/Python3/bin/python3
+SNPS_VCS_CLANG_PATH=/mnt/NVME2/synopsys/vcs/W-2024.09-SP1/linux64/clang
+SNPS_INTERNAL_VCS_LINUX_OS=linux
+SNPS_CONTAINER_HOME=/mnt/NVME2/synopsys/snps_container
+SILICONSMART_HOME=/mnt/NVME2/synopsys/siliconsmart
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/1238423,unix/unix:/tmp/.ICE-unix/1238423
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+SCL_HOME=/mnt/NVME2/synopsys/scl
+SCL_ENABLE_BRIDGE=1
+RTLA_HOME=/mnt/NVME2/synopsys/rtla
+RISC_V_OBJCOPY=/mnt/SATA2/riscv32gcc/bin/riscv32-unknown-elf-objcopy
+RISC_V_GCC=/mnt/SATA2/riscv32gcc/bin/riscv32-unknown-elf-gcc
+RISCV_TOOLCHAIN=/mnt/SATA2/riscv32gcc
+RISCV_OBJCOPY=/mnt/SATA2/riscv32gcc/bin/riscv32-unknown-elf-objcopy
+RISCV_GCC=/mnt/SATA2/riscv32gcc/bin/riscv32-unknown-elf-gcc
+RISCV_DV_ROOT=/home/qamar/Documents/verif/riscv-dv
+RHSC_ELECTROTHERMAL_ANALYSIS_FUSION_HOME=/mnt/NVME2/synopsys/rhsc_electrothermal_analysis_fusion
+RHSC_ANALYSIS_FUSION_HOME=/mnt/NVME2/synopsys/rhsc_analysis_fusion
+PULSE_SCRIPT=/etc/xrdp/pulse/default.pa
+PRIME_HOME=/mnt/NVME2/synopsys/prime
+PRIMEWAVE_HOME=/mnt/NVME2/synopsys/primewave
+PRIMEWAVERELIABILITY_HOME=/mnt/NVME2/synopsys/primewavereliability
+PRIMESIM_HOME=/mnt/NVME2/synopsys/primesim
+PRIMESIM_EMIR_HOME=/mnt/NVME2/synopsys/primesim_emir
+PRIMESIM_DR_HOME=/mnt/NVME2/synopsys/primesim_dr
+PRIMESIM_DI_HOME=/mnt/NVME2/synopsys/primesim_di
+PRIMELIB_HOME=/mnt/NVME2/synopsys/primelib
+PRIMECLOSURE_HOME=/mnt/NVME2/synopsys/primeclosure
+PPRTL_HOME=/mnt/NVME2/synopsys/pprtl
+OVA_UUM=0
+NT_HOME=/mnt/NVME2/synopsys/nt
+MW_HOME=/mnt/NVME2/synopsys/mw
+MODULES_RUN_QUARANTINE=LD_LIBRARY_PATH LD_PRELOAD
+MODULES_CMD=/usr/share/Modules/libexec/modulecmd.tcl
+MODULESHOME=/usr/share/Modules
+MODULEPATH_modshare=/usr/share/Modules/modulefiles:2:/etc/modulefiles:2:/usr/share/modulefiles:2
+MODULEPATH=/etc/scl/modulefiles:/etc/scl/modulefiles:/etc/scl/modulefiles:/etc/scl/modulefiles:/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles
+MECHANICAL_ENGINE_ANALYSIS_FUSION_HOME=/mnt/NVME2/synopsys/mechanical_engine_analysis_fusion
+LOADEDMODULES=
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_HOME=/mnt/NVME2/synopsys/lc
+LC_ALL=C
+LAKER_HOME=/mnt/NVME2/synopsys/laker
+IDQ_HOME=/mnt/NVME2/synopsys/idq
+IDENTIFY_HOME=/mnt/NVME2/synopsys/identify
+ICV_WORKBENCH_HOME=/mnt/NVME2/synopsys/icv_workbench
+ICVALIDATOR_HOME=/mnt/NVME2/synopsys/icvalidator
+ICC_HOME=/mnt/NVME2/synopsys/icc
+ICC2_HOME=/mnt/NVME2/synopsys/icc2/W-2024.09-SP2/
+HSPICE_HOME=/mnt/NVME2/synopsys/hspice
+HSIM_HOME=/mnt/NVME2/synopsys/hsim
+HISTCONTROL=ignoredups
+FUSIONCOMPILER_HOME=/mnt/NVME2/synopsys/fusioncompiler
+FPGA_HOME=/mnt/NVME2/synopsys/fpga
+FM_HOME=/mnt/NVME2/synopsys/fm
+FINESIM_HOME=/mnt/NVME2/synopsys/finesim
+EXECMAN_HOME=/mnt/NVME2/synopsys/execman
+ESP_HOME=/mnt/NVME2/synopsys/esp
+EMBEDIT_HOME=/mnt/NVME2/synopsys/embedit
+DFTVIEW_HOME=/mnt/NVME2/synopsys/dftview
+DESKTOP_SESSION=xfce
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1052/bus
+CUSTOMINFRASTRUCTURE_HOME=/mnt/NVME2/synopsys/custominfrastructure
+CUSTOMCOMPILER_HOME=/mnt/NVME2/synopsys/customcompiler
+COLORTERM=truecolor
+CMLP_HOME=/mnt/NVME2/synopsys/cmlp
+CF_HOME=/mnt/NVME2/synopsys/cf
+CERTITUDE_HOME=/mnt/NVME2/synopsys/certitude
+CCK_HOME=/mnt/NVME2/synopsys/cck
+BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@_}
+BASH_FUNC_switchml%%=() {  typeset swfound=1;_ if [ "${MODULES_USE_COMPAT_VERSION:-0}" = '1' ]; then_ typeset swname='main';_ if [ -e /usr/share/Modules/libexec/modulecmd.tcl ]; then_ typeset swfound=0;_ unset MODULES_USE_COMPAT_VERSION;_ fi;_ else_ typeset swname='compatibility';_ if [ -e /usr/share/Modules/libexec/modulecmd-compat ]; then_ typeset swfound=0;_ MODULES_USE_COMPAT_VERSION=1;_ export MODULES_USE_COMPAT_VERSION;_ fi;_ fi;_ if [ $swfound -eq 0 ]; then_ echo "Switching to Modules $swname version";_ source /usr/share/Modules/init/bash;_ else_ echo "Cannot switch to Modules $swname version, command not found";_ return 1;_ fi_}
+BASH_FUNC_scl%%=() {  if [ "$1" = "load" -o "$1" = "unload" ]; then_ eval "module $@";_ else_ /usr/bin/scl "$@";_ fi_}
+BASH_FUNC_module%%=() {  _module_raw "$@" 2>&1_}
+BASH_FUNC_ml%%=() {  module ml "$@"_}
+BASH_FUNC__module_raw%%=() {  unset _mlshdbg;_ if [ "${MODULES_SILENT_SHELL_DEBUG:-0}" = '1' ]; then_ case "$-" in _ *v*x*)_ set +vx;_ _mlshdbg='vx'_ ;;_ *v*)_ set +v;_ _mlshdbg='v'_ ;;_ *x*)_ set +x;_ _mlshdbg='x'_ ;;_ *)_ _mlshdbg=''_ ;;_ esac;_ fi;_ unset _mlre _mlIFS;_ if [ -n "${IFS+x}" ]; then_ _mlIFS=$IFS;_ fi;_ IFS=' ';_ for _mlv in ${MODULES_RUN_QUARANTINE:-};_ do_ if [ "${_mlv}" = "${_mlv##*[!A-Za-z0-9_]}" -a "${_mlv}" = "${_mlv#[0-9]}" ]; then_ if [ -n "`eval 'echo ${'$_mlv'+x}'`" ]; then_ _mlre="${_mlre:-}${_mlv}_modquar='`eval 'echo ${'$_mlv'}'`' ";_ fi;_ _mlrv="MODULES_RUNENV_${_mlv}";_ _mlre="${_mlre:-}${_mlv}='`eval 'echo ${'$_mlrv':-}'`' ";_ fi;_ done;_ if [ -n "${_mlre:-}" ]; then_ eval `eval ${_mlre} /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash '"$@"'`;_ else_ eval `/usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash "$@"`;_ fi;_ _mlstatus=$?;_ if [ -n "${_mlIFS+x}" ]; then_ IFS=$_mlIFS;_ else_ unset IFS;_ fi;_ unset _mlre _mlv _mlrv _mlIFS;_ if [ -n "${_mlshdbg:-}" ]; then_ set -$_mlshdbg;_ fi;_ unset _mlshdbg;_ return $_mlstatus_}
+ALE_HOME=/mnt/NVME2/synopsys/ale
+0
+0
+70
+1746080334 tb/tracer.sv
+1746080334 tb/tracer_pkg.sv
+1746080334 tb/pkg.sv
+1746080334 soc/rom/tsmc_rom_1k_rtl.v
+1746080334 soc/sram/tsmc_8k_rtl.v
+1746080334 soc/sram/tsmc_32k_rtl.v
+1746080334 pads/tpz018nv_270a/tpz018nv.v
+1747114845 tb/rv32i_soc_tb.sv
+1747114845 soc/rv32i_soc.sv
+1747114845 soc/io_mux.sv
+1746355156 soc/core/data_mem.sv
+1746596137 soc/core/sram_wrapper.sv
+1746513136 soc/debug/debug_top.sv
+1746342944 soc/debug/dm.sv
+1746080334 soc/debug/dtm.sv
+1746515352 soc/uncore/plic/plic_top.sv
+1747114845 soc/uncore/plic/plic_core.sv
+1746294239 soc/uncore/plic/plic_gateway.sv
+1746294239 soc/uncore/plic/plic_pkg.sv
+1746082976 soc/uncore/i2c/rtl/i2c_master_top.v
+1746082974 soc/uncore/i2c/rtl/i2c_master_byte_ctrl.v
+1747114845 soc/uncore/i2c/rtl/i2c_master_bit_ctrl.v
+1746080334 soc/uncore/i2c/rtl/i2c_master_defines.v
+1746082910 soc/uncore/ptc/ptc_top.v
+1747114845 soc/uncore/ptc/ptc_defines.v
+1746513136 soc/uncore/clint/clint_top.sv
+1746513136 soc/uncore/clint/clint_wb.sv
+1746080334 soc/uncore/uart/uart_wb.v
+1747114845 soc/uncore/uart/uart_transmitter.v
+1746971998 soc/uncore/uart/uart_top.v
+1747114845 soc/uncore/uart/uart_tfifo.v
+1746080334 soc/uncore/uart/uart_sync_flops.v
+1746080334 soc/uncore/uart/uart_rfifo.v
+1747114845 soc/uncore/uart/uart_regs.v
+1747114845 soc/uncore/uart/uart_receiver.v
+1746080334 soc/uncore/uart/raminfr.v
+1746080334 soc/uncore/uart/uart_defines.v
+1747114845 soc/uncore/spi/simple_spi_top.v
+1747114845 soc/uncore/spi/fifo4.v
+1747114845 soc/uncore/gpio/gpio_top.sv
+1746080334 soc/uncore/gpio/bidirec.sv
+1746080334 soc/uncore/gpio/gpio_defines.v
+1747114845 soc/WishboneInterconnect/wishbone_controller.sv
+1747114845 soc/WishboneInterconnect/wb_intercon.sv
+1747114845 soc/WishboneInterconnect/wb_intercon_1.2.2-r1/wb_mux.v
+1747114845 soc/core/rv32i_top.sv
+1747114845 soc/core/core_dbg_fsm.sv
+1747114845 soc/core/control_unit.sv
+1747114968 soc/core/data_path.sv
+1746542377 soc/core/alu.sv
+1746083140 soc/core/exception_encoder.sv
+1746080334 soc/core/atomic_extension.sv
+1747114845 soc/core/iadu.sv
+1747114845 soc/core/decompressor.sv
+1747114845 soc/core/pipeline_controller.sv
+1746080334 soc/core/hazard_controller.sv
+1746080334 soc/core/forwarding_unit.sv
+1746080334 soc/core/rom.sv
+1746603770 soc/core/reg_file.sv
+1747114845 soc/core/main_control.sv
+1746080334 soc/core/imm_gen.sv
+1747114845 soc/core/csr_file.sv
+1746080334 soc/core/branch_controller.sv
+1747114845 soc/core/div.sv
+1746080334 soc/core/mul.sv
+1747114845 soc/core/alu_control.sv
+1746090739 soc/core/alignment_units.sv
+1746080334 soc/debug/debug_pkg.sv
+1747114845 soc/core/lib.sv
+1747115058 filelist.f
+4
+1733288192 /mnt/NVME2/synopsys/vcs/W-2024.09-SP1/linux64/lib/libvirsim.so
+1733286010 /mnt/NVME2/synopsys/vcs/W-2024.09-SP1/linux64/lib/liberrorinf.so
+1733286000 /mnt/NVME2/synopsys/vcs/W-2024.09-SP1/linux64/lib/libsnpsmalloc.so
+1733285992 /mnt/NVME2/synopsys/vcs/W-2024.09-SP1/linux64/lib/libvfs.so
+1747115173 simv.daidir
+-1 partitionlib

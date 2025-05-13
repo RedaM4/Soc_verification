@@ -9,8 +9,9 @@ import wb_pkg::*;
 import clock_and_reset_pkg::*;
 import spi_pkg::*;
 
-import soc_pkg::* ; 
+import spi_module_pkg::*;
 
+import soc_pkg::* ; 
 
 
 //****************************8
@@ -18,10 +19,9 @@ import soc_pkg::* ;
 //****************************8
 `include "../sv/soc_mcsequencer.sv"
 `include "../sv/soc_mcseqs_lib.sv"
-`include "../soc_ref_module/soc_pkg.sv"
 
-`include "../tb/soc_tb.sv"
-`include "../tb/soc_test_lib.sv"
+`include "soc_tb.sv"
+`include "soc_test_lib.sv"
 
 
 
@@ -35,7 +35,7 @@ initial begin
 
     //=============================================
     // uart_vif_config::set(null,"*tb.uartenv.*","vif",dut.in_uart); 
-    spi_vif_config::set(null,"*tb.spi_env.*","vif",dut.in_spi);
+    spi_vif_config::set(null,"*tb.spienv.*","vif",dut.in_spi1);
 
     wb_vif_config::set(null,"*tb.wbenv.*","vif",dut.in_wb);
     clock_and_reset_vif_config::set(null , "*tb.clk_rst_env.*" , "vif" , dut.clk_rst_if);

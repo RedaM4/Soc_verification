@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1746878714.278284670, "rt":49.56, "ut":48.55, "st":0.75}}
+{"vcselab":{"timestamp_begin":1746878763.918943427, "rt":0.31, "ut":0.20, "st":0.11}}
+{"link":{"timestamp_begin":1746878764.293772070, "rt":0.27, "ut":0.10, "st":0.16}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1746878714.044120054}
+{"VCS_COMP_START_TIME": 1746878714.044120054}
+{"VCS_COMP_END_TIME": 1746878764.629780040}
+{"VCS_USER_OPTIONS": "-full64 -f filelist.f"}
+{"vcs1": {"peak_mem": 1046152}}
+{"vcselab": {"peak_mem": 183620}}

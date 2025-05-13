@@ -1,0 +1,3 @@
+Command Line: /mnt/NVME2/synopsys/vcs/W-2024.09-SP1/linux64/bin/elabcom -simflow -KDBRESOLVER -simvdaidir /home/Reda_Alhashem/git/Soc_verification/Soc/tb/simv.daidir -saveLevel -ssz -ssv -ssy -q -logdir /home/Reda_Alhashem/git/Soc_verification/Soc/tb/simv.daidir/kdbresolverLog
+uname(Linux localhost.localdomain 4.18.0-553.40.1.el8_10.x86_64 #1 SMP Thu Feb 6 21:20:51 EST 2025 x86_64)
+au time 0.221817 0.217082 0.056336 delta 121442304 121442304 total 373477376 373477376

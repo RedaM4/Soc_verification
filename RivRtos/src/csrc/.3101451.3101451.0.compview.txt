@@ -1,0 +1,7 @@
+Command exited with non-zero status 1
+{"vcs1":{"timestamp_begin":1746186450.764914950, "rt":155.12, "ut":34.82, "st":1.23}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1746186450.399585960}
+{"VCS_COMP_START_TIME": 1746186450.399585960}
+{"VCS_COMP_END_TIME": 1746186605.953386788}
+{"VCS_USER_OPTIONS": "-full64 -sverilog -f filelist.f tb/SimJTAG.cc tb/remote_bitbang.cc -cc g++ -CFLAGS -std=c++11 -Itb -debug_all -o simv"}
+{"vcs1": {"peak_mem": 1082340}}

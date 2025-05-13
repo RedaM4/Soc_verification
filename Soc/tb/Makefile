@@ -12,6 +12,7 @@ CORE_DIR := ../../RV32_SoC/
 
 # Filelists
 CORE_LIST := rtl_filelist.f
+# CORE_LIST := ../../RivRtos/src/filelist.f
 MODULES_LIST := filelist.f
 
 # Git pulls
@@ -24,14 +25,23 @@ pull_spi:
 pull_i2c:
 	cd $(I2C_DIR) && git pull
 
-pull_pwm:
-	cd $(PWM_DIR) && git pull
+# pull_pwm:
+# 	cd $(PWM_DIR) && git pull
 
 pull_gpio:
 	cd $(GPIO_DIR) && git pull
 
+pull_rtl:	
+	cd $(CORE_DIR) && git pull
+
 # Pull all peripherals
-pull_all: pull_uart pull_spi pull_i2c pull_pwm pull_gpio
+pull_all: pull_uart pull_spi pull_i2c  pull_gpio
+
+init:
+	cd ../.. && git submodule update --init
+
+
+
 
 # Compile using both filelists
 compile:
@@ -47,4 +57,29 @@ clean:
 	rm -rf simv simv.daidir csrc *.vcd *.log ucli.key *.fsdb *.bak *.sv.d
 
 # Default target: pull all, compile, run
-all: pull_all run
+all: compile run
+
+
+help:
+	@echo ""
+	@echo "Usage: make <target>"
+	@echo ""
+	@echo "important the first time Git/Submodule Setup:"
+	@echo "  init           - Initialize and update git submodules"
+	@echo ""
+	@echo "Peripheral Git Pull Targets:"
+	@echo "  pull_uart      - Pull latest UART UVC"
+	@echo "  pull_spi       - Pull latest SPI UVC"
+	@echo "  pull_i2c       - Pull latest I2C UVC"
+	@echo "  pull_pwm       - Pull latest PWM UVC"
+	@echo "  pull_gpio      - Pull latest GPIO UVC"
+	@echo "  pull_all       - Pull all peripheral UVCs"
+	@echo ""
+	@echo "Build and Simulation:"
+	@echo "  compile        - Compile design using both filelists"
+	@echo "  run            - Run simulation using run.f"
+	@echo "  clean          - Clean build and simulation artifacts"
+	@echo ""
+	@echo "Full Flow:"
+	@echo "  all            - Pull all, compile, and run"
+	@echo ""

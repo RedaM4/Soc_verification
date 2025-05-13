@@ -1,0 +1,5 @@
+{"vcs1":{"timestamp_begin":1746613422.350191709, "rt":0.12, "ut":0.03, "st":0.07}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1746613421.614012786}
+{"VCS_COMP_START_TIME": 1746613421.614012786}
+{"VCS_COMP_END_TIME": 1746613422.512835755}
+{"VCS_USER_OPTIONS": "-full64 -sverilog -f filelist.f tb/SimJTAG.cc tb/remote_bitbang.cc -cc g++ -CFLAGS -std=c++11 -Itb -debug_all -debug_pp -debug_access+all+xrw -kdb +vcs+lic+wait -cm line+cond+fsm -o simv"}
