@@ -33,9 +33,9 @@ function void write_wb(wb_transaction tr);   // type need to be fixed
 //*********
  if (tr.addr >= 32'h00000000 && tr.addr <= 32'h0000000F) begin
         // SPI_1
-
+   wb2spi1ref_port.write(tr);
         wb2scb_port.write(tr);
-        wb2spi1ref_port.write(tr);
+     
        $display("SPI_1 transaction received (addr: %h)", tr.addr);
 
     end
